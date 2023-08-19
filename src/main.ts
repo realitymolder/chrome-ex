@@ -1,8 +1,22 @@
-import './app.css'
-import App from './App.svelte'
+import './app.postcss';
+import App from './App.svelte';
 
-const app = new App({
-  target: document.getElementById('app'),
-})
+const observer = new MutationObserver((mutationsList) => {
+	for (const mutation of mutationsList) {
+		if (mutation.type === 'childList') {
+			const element = document.querySelector('div#below');
+			if (element) {
+				observer.disconnect();
+				const root = document.createElement('div');
+				new App({ target: root });
+				element.prepend(root);
+				return;
+			}
+		}
+	}
+});
 
-export default app
+observer.observe(document.documentElement, {
+	childList: true,
+	subtree: true,
+});

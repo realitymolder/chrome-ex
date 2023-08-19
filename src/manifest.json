@@ -1,0 +1,42 @@
+{
+	"{{chrome}}.manifest_version": 3,
+	"{{firefox}}.manifest_version": 2,
+	"icons": {
+		"16": "icon/16.png",
+		"32": "icon/32.png",
+		"48": "icon/48.png",
+		"96": "icon/96.png",
+		"128": "icon/128.png"
+	},
+	"{{chrome}}.action": {
+		"default_popup": "src/popup/popup.html"
+	},
+	"{{firefox}}.browser_action": {
+		"default_popup": "src/popup/popup.html"
+	},
+	"options_ui": {
+		"page": "src/options/options.html",
+		"open_in_tab": true
+	},
+	"content_scripts": [
+		{
+			"js": ["src/main.ts"],
+			"matches": ["*://*.youtube.com/watch*"]
+		},
+		{
+			"js": ["src/main.ts"],
+			"matches": ["*://*.youtube.com/"]
+		}
+	],
+	"background": {
+		"{{chrome}}.service_worker": "src/background.ts",
+		"{{firefox}}.scripts": ["src/background.ts"]
+	},
+	"{{firefox}}.browser_specific_settings": {
+		"gecko": {
+			"id": "addon@example.com",
+			"strict_min_version": "42.0"
+		}
+	},
+	"permissions": ["storage"]
+}
