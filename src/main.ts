@@ -6,10 +6,10 @@ const observer = new MutationObserver((mutationsList) => {
 		if (mutation.type === 'childList') {
 			const element = document.querySelector('div#below');
 			if (element) {
-				observer.disconnect();
 				const root = document.createElement('div');
 				new App({ target: root });
 				element.prepend(root);
+				observer.disconnect();
 				return;
 			}
 		}

@@ -22,10 +22,6 @@
 		{
 			"js": ["src/main.ts"],
 			"matches": ["*://*.youtube.com/watch*"]
-		},
-		{
-			"js": ["src/main.ts"],
-			"matches": ["*://*.youtube.com/"]
 		}
 	],
 	"background": {
