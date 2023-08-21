@@ -1,6 +1,12 @@
 <script lang="ts">
 	import browser from 'webextension-polyfill';
-	import Layout from './components/Layout.svelte';
+	import './app.postcss';
+	import './style.css';
+
+	import { Badge, Button, Card, Group, Image, Text } from '@svelteuidev/core';
+	import Test from './components/Test.svelte';
 </script>
 
-<Layout>App</Layout>
+<div class="mt-5">
+	<Test />
+</div>

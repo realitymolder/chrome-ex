@@ -1,6 +1,7 @@
 <script lang="ts">
 	import browser from 'webextension-polyfill';
-	import Layout from '../components/Layout.svelte';
+	import '../app.postcss';
+	import '../style.css';
 </script>
 
-<Layout>Options</Layout>
+<div>Options</div>

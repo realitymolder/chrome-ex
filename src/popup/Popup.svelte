@@ -1,9 +1,7 @@
 <script lang="ts">
-	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
-	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	import browser from 'webextension-polyfill';
 	import '../app.postcss';
-
-	import Layout from '../components/Layout.svelte';
+	import '../style.css';
 </script>
 
-<Layout>Popup</Layout>
+<div>Popup</div>
