@@ -3,7 +3,7 @@
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
 
-	import Counter from '../components/Counter.svelte';
+	import Layout from '../components/Layout.svelte';
 </script>
 
-<Counter />
+<Layout>Popup</Layout>
