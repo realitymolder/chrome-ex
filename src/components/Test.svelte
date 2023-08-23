@@ -8,10 +8,10 @@
 		<Image src="./image.png" height={'160px'} alt="Portugal" />
 	</Card.Section> -->
 
-	<!-- <Group position="apart">
+	<Group position="apart">
 		<Text weight={'500px'}>Portugal Porto Adventures</Text>
 		<Badge color="pink" variant="light">On Sale</Badge>
-	</Group> -->
+	</Group>
 
 	<Text size="sm">
 		With Portugal Porto Adventures you can explore more of the beautiful portuguese cities, by walking on food, meeting the locals and eat

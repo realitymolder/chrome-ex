@@ -18,9 +18,13 @@ export default defineConfig({
 	plugins: [
 		svelte(),
 		webExtension({
+			additionalInputs: ['src/app/app.html', 'src/app/app.ts'],
 			browser: process.env.TARGET || 'chrome',
 			manifest: generateManifest,
 			watchFilePaths: ['package.json', 'manifest.json'],
+			webExtConfig: {
+				startUrl: 'https://www.youtube.com/',
+			},
 		}),
 	],
 });

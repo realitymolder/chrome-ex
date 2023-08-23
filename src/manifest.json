@@ -20,7 +20,7 @@
 	},
 	"content_scripts": [
 		{
-			"js": ["src/main.ts"],
+			"js": ["src/contentScripts.ts"],
 			"matches": ["*://*.youtube.com/watch*"]
 		}
 	],
@@ -34,5 +34,11 @@
 			"strict_min_version": "42.0"
 		}
 	},
+	"web_accessible_resources": [
+		{
+			"resources": ["src/app/app.html", "src/app/app.ts"],
+			"matches": ["*://*.youtube.com/watch*"]
+		}
+	],
 	"permissions": ["storage"]
 }
